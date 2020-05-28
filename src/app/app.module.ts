@@ -17,9 +17,10 @@ import { IssueFormComponent } from './issue-form/issue-form.component';
 import { RoutingModule } from './routing/routing.module';
 import { GlinkComponent } from './glink/glink.component';
 import { StatusFilterComponent } from './status-filter/status-filter.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     IssueFormComponent,
     GlinkComponent,
     StatusFilterComponent,
-    UserComponent
+    UserComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     RoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

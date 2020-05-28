@@ -1,14 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Issue } from './issue';
-import { HttpClient, HttpHeaders } from '@angular/common/http'; // import
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { httpOptions } from './auth.service';
 
-const httpOptions = {
-  headers: new HttpHeaders({ 
-     'Content-Type': 'application/json',
-     //'Authorization': '', // admin/password
-  })
-};
+
 
 
 @Injectable({
@@ -31,8 +26,8 @@ private issueUrl = 'http://localhost:8080/subjects';
  ) { }
  
 
- getIssues(): Observable<Issue[]> {
-  return this.http.get<Issue[]>(`${this.issueUrl}`, httpOptions);
+ public getIssues(): Promise<Issue[]> {
+  return this.http.get<Issue[]>(`${this.issueUrl}`, httpOptions).toPromise();
 }
 
 getIssue(id: number): Promise<Issue> {

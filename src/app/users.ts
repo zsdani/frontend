@@ -7,3 +7,5 @@ export class Users {
     sum_credit: number=0;
     e_mail: string='';
 }
+
+
