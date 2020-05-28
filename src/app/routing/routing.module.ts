@@ -40,8 +40,13 @@ const routes: Routes = [
     component: UserComponent
   },
   {
+
     path: 'buildings',
-    component: BuildingsComponent
+    component: BuildingsComponent,
+    /*canActivate: [ AuthGuard ],
+    data: {
+      roles: ['ROLE_ADMIN']
+    }*/
   },
 ];
 

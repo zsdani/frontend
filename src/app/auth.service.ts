@@ -18,6 +18,7 @@ export class AuthService {
 
   private authUrl = 'http://localhost:8080/users';
 
+
   public isLoggedIn = false;
   public user: Users;
   public redirectUrl: string;

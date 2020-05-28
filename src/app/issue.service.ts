@@ -10,17 +10,9 @@ import { httpOptions } from './auth.service';
   providedIn: 'root'
 })
 export class IssueService {
-  // place into service class
+
 private issueUrl = 'http://localhost:8080/subjects';
 
-
-
-  
-  
-
-  //constructor() { }
-  
-  // Modify/add these methods
  constructor(
   private http: HttpClient
  ) { }
