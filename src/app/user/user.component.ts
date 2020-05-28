@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Users } from '../users';
-import { userservice } from '../userservice';
+import { UsersService } from '../users.service';
 import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-user',
@@ -9,16 +10,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent {
-  users: Users = 
-    {
-      id: 1,
-      username: 'hkiuw0',
-      name: 'Dani',
-      password: 'fejlesztes',
-      role: 'STUDENT',
-      sum_credit: 35,
-      e_mail: 'valmi@eamil.com',
-    }
+  private users: Users[] = [];
+  constructor(
+    private issueService: UsersService
+  ) { 
+    
+  }
     
   ;
 }

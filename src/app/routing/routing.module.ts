@@ -8,6 +8,7 @@ import { IssueDetailComponent } from '../issue-detail/issue-detail.component';
 import { UserComponent } from '../user/user.component';
 import { AuthGuard } from '../auth.guard';
 import { LoginFormComponent } from '../login-form/login-form.component';
+import { BuildingsComponent } from '../buildings/buildings.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserComponent
+  },
+  {
+    path: 'buildings',
+    component: BuildingsComponent
   },
 ];
 

@@ -21,6 +21,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { UsersService } from './users.service';
+import { BuildingsComponent } from './buildings/buildings.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { LoginFormComponent } from './login-form/login-form.component';
     GlinkComponent,
     StatusFilterComponent,
     UserComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    BuildingsComponent
+
   ],
   imports: [
     BrowserModule,

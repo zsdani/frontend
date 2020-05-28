@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col">
+      <h1 class="display-2">My issues</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Épület neve:</th>
+            <th scope="col">Szint:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let building of buildings" >
+            <th scope="row">{{ building.id }}</th>
+            <td>{{ building.b_name }}</td>
+            <td>{{ building.floors }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
